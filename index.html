@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlackJack Game |</title>
+    <style>
+      body {
+        background-color: green;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+      }
+      .btns {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        width: 230px;
+        /* background-color: greenyellow; */
+        background-color: goldenrod;
+        /* border: 2px solid red; */
+        border-radius: 2px;
+        font-size: 1.3rem;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: goldenrod">Welcome to BlackJack</h1>
+    <h3 id="ques" style="font-style: italic">Want to play a round?</h3>
+    <h3 id="card">Cards:</h3>
+    <h3 id="sum">Sum:</h3>
+    <button class="btns" id="startGame" onclick="startGame()">
+      Start Game
+    </button>
+    <button class="btns" id="newCard">New Card</button>
+    <script src="/BlackJackGame/index.js"></script>
+  </body>
+</html>
