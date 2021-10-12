@@ -7,8 +7,9 @@ let a = document.getElementById("sum");
 let b = document.getElementById("ques");
 let c = document.getElementById("card");
 
+//CODE FOR GENERATING RANDOM NUMBER
 function randomNumber(){
-    let rNumber = (Math.floor(Math.random() * 13) + 1);
+    let rNumber = Math.floor(Math.random() * 13) + 1;
     if(rNumber>10){
         return 10;
     }
@@ -20,6 +21,8 @@ function randomNumber(){
     }
 }
 
+
+//CODE FOR START-GAME BUTTON
 function startGame(){
     isAlive = true;
     let firstCard = randomNumber();
@@ -29,25 +32,18 @@ function startGame(){
     renderGame();
 }
 
-// let variable2 = document.getElementById("startGame");
-// variable2.addEventListener("click",fucntion(){
-//     isAlive = true
-//     let firstCard = randomNumber()
-//     let secondCard = randomNumber()
-//     cards = [firstCard,secondCard] 
-//     sum = firstCard + secondCard
-//     renderGame()
-// } )
 
+//CODE FOR RENDER GAME FUNCTION
 function renderGame(){ 
     c.innerText = "Cards:";
     for(let i=0;i<cards.length;i++){
         c.innerText +=" "+ cards[i] + " " ;
-    } 
+    }        
+    
     a.innerText = "Sum: "  + sum; 
-
+    
     if(sum <= 20){
-        message = "Do you want to play again?"; 
+    message = "Do you want to play again?"; 
     }
     else if(sum === 21){
         message = "You've got a BlackJack ";
@@ -60,15 +56,8 @@ function renderGame(){
     b.innerText = message;
 }
 
-// function newCard(){
-//     if(isAlive === true && hasBlackJack === false){
-//         let newCard = randomNumber()
-//         sum += newCard;
-//         cards.push(newCard);
-//         renderGame();
-//     }
-// }
 
+//CODE FOR NEW-CARD BUTTON
 let variable = document.getElementById("newCard");
 
 variable.addEventListener("click",function(){
