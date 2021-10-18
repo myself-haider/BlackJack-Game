@@ -58,14 +58,13 @@ function renderGame(){
 
 
 //CODE FOR NEW-CARD BUTTON
-let variable = document.getElementById("newCard");
+function newCard(){
+        if(isAlive === true && hasBlackJack === false){
+                    let newCard = randomNumber()
+                    sum += newCard;
+                    cards.push(newCard);
+                    renderGame();
+                }
+    }   
 
-variable.addEventListener("click",function(){
-    if(isAlive === true && hasBlackJack === false){
-                let newCard = randomNumber()
-                sum += newCard;
-                cards.push(newCard);
-                renderGame();
-            }
-})
 
